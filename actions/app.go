@@ -6,6 +6,7 @@ import (
 	forcessl "github.com/gobuffalo/mw-forcessl"
 	i18n "github.com/gobuffalo/mw-i18n"
 	paramlogger "github.com/gobuffalo/mw-paramlogger"
+	"github.com/gobuffalo/packr/v2"
 	"github.com/unrolled/secure"
 
 	contenttype "github.com/gobuffalo/mw-contenttype"
@@ -52,7 +53,14 @@ func App() *buffalo.App {
 		// Set the request content type to JSON
 		app.Use(contenttype.Set("application/json"))
 
+		//Handlers
 		app.GET("/", HomeHandler)
+		app.GET("/cats", CatsList)
+		app.GET("/cats/{id:[0-9]+}", CatsGetByID)
+		app.GET("/calc/add/{num1}/{num2}", CalcAdd)
+		app.GET("/calc/sub/{num1}/{num2}", CalcSub)
+		app.GET("/calc/mul/{num1}/{num2}", CalcMul)
+		app.GET("/calc/div/{num1}/{num2}", CalcDiv)
 	}
 
 	return app
