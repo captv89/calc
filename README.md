@@ -1,6 +1,6 @@
-# Welcome to Buffalo!
+# Welcome to Simple Calculator Built with Buffalo!
 
-Thank you for choosing Buffalo for your web development needs.
+I chose Buffalo as prefered framework as it gives everything out of the box for newcomers like me. This is a simple Go (Golang) calculator with API.
 
 ## Starting the Application
 
@@ -14,7 +14,16 @@ If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you 
 
 ## What Next?
 
-We recommend you heading over to [http://gobuffalo.io](http://gobuffalo.io) and reviewing all of the great documentation there.
+### To Add
+
+Pass num1 and num2 in the path followed by add/.
+
+Example
+
+	http://localhost:3000/add/3/4
+
+This should give you an answer 7
+
 
 Good luck!
 
