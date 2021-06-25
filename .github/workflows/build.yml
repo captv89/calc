@@ -54,11 +54,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Build container image
-      uses: docker/build-push-action@v1
+      uses: docker/build-push-action@v2
       with:
         push: true
-        name: go-calc-api
-        tags: latest
+        tags: image_name
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
