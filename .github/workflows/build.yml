@@ -49,18 +49,18 @@ jobs:
         path: bin/
 
   Build-and-Push-Docker-Image:
-  runs-on: ubuntu-latest
-  needs: build
-  name: Docker Build, Tag, Push
+    runs-on: ubuntu-latest
+    needs: build
+    name: Docker Build, Tag, Push
 
-  steps:
-  - name: Checkout
-    uses: actions/checkout@v1
-  - name: Build container image
-    uses: docker/build-push-action@v1
-    with:
-      username: ${{github.actor}}
-      password: ${{secrets.GITHUB_TOKEN}}
-      registry: docker.pkg.github.com
-      repository: captv89/github-actions-for-packages/tic-tac-toe
-      tag_with_sha: true
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Build container image
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{github.actor}}
+        password: ${{secrets.GITHUB_TOKEN}}
+        registry: docker.pkg.github.com
+        repository: captv89/github-actions-for-packages/tic-tac-toe
+        tag_with_sha: true
