@@ -58,7 +58,7 @@ jobs:
       with:
         push: true
         name: go-calc-api
-        tags: user/app:latest
+        tags: latest
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
