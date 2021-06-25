@@ -28,19 +28,16 @@ jobs:
     - name: Buffalo
       run: gofish install buffalo
     
-    - name: Grift
-      run: go get github.com/markbates/grift/grift@v1.5.0
-      
-    - name: Flect
-      run: go get github.com/gobuffalo/flect@v0.2.2
-      
-    - name: Pop
-      run: go get github.com/gobuffalo/pop/v5@v5.3.3
+    - name: Get Inderect Dependencies
+      run: |
+        go get github.com/markbates/grift/grift@v1.5.0
 
     - name: Build
       run: |
         GOOS=linux GOARCH=amd64 buffalo build -o bin/calc-linux
+        go get github.com/markbates/grift/grift@v1.5.0
         GOOS=darwin GOARCH=amd64 buffalo build -o bin/calc-mac
+        go get github.com/markbates/grift/grift@v1.5.0
         GOOS=windows GOARCH=amd64 buffalo build -o bin/calc-windows
     
     - uses: actions/upload-artifact@v2
