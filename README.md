@@ -2,8 +2,12 @@
 
 I chose Buffalo as prefered framework as it gives everything out of the box for newcomers like me. This is a simple Go (Golang) calculator with API. 
 
-Please ignore my imaturity in the coding. Any recomendations on improving the code is welcome. #LearningForEver
+Please ignore my immaturity in the coding. Any recomendations on improving the code is welcome. #LearningForEver
 
+## Get Started
+To Set the Development Enviornment afresh to start working run
+
+	buffalo new calc --api --skip-pop --module github.com/githubusername/calc
 ## Starting the Application
 
 Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
