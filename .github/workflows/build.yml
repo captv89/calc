@@ -22,7 +22,7 @@ jobs:
       run: go mod tidy
 
     - name: GoFish
-        run: curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/main/scripts/install.sh | bash
+      run: curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/main/scripts/install.sh | bash
     - run: gofish init
 
     - name: Buffalo
