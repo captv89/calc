@@ -21,8 +21,12 @@ jobs:
     - name: Tidy
       run: go mod tidy
 
+    - name: GoFish
+        run: curl -fsSL https://raw.githubusercontent.com/fishworks/gofish/main/scripts/install.sh | bash
+    - run: gofish init
+
     - name: Buffalo
-      run: go install github.com/gobuffalo/buffalo/buffalo
+      run: gofish install buffalo
     
     - name: Grift
       run: go get github.com/markbates/grift/grift@v1.5.0
