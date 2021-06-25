@@ -17,4 +17,5 @@ require (
 	github.com/gorilla/mux v1.7.4
 	github.com/rs/cors v1.7.0
 	github.com/unrolled/secure v1.0.9
+	github.com/markbates/grift v1.5.0 //  indirect
 )
