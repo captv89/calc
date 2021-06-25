@@ -20,6 +20,9 @@ jobs:
 
     - name: Tidy
       run: go mod tidy
+
+    - name: Buffalo
+      run: go install github.com/gobuffalo/buffalo/buffalo
     
     - name: Grift
       run: go get github.com/markbates/grift/grift@v1.5.0
