@@ -57,7 +57,7 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         push: true
-        tags: go-calc-api
+        tags: go_calc_api
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
