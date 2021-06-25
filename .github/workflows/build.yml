@@ -56,7 +56,9 @@ jobs:
     - name: Build container image
       uses: docker/build-push-action@v1
       with:
-        name: captv89/calc/go-calc-api
+        push: true
+        name: go-calc-api
+        tags: user/app:latest
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
